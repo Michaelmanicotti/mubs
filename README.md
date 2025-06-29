@@ -7,7 +7,10 @@ This library requires the current version of NumPy (v2.3), QuTip (v5) and was ma
 
 ## The Basis "Data Type"
 There are lots of ways to store sets of bases. The most common being lists of square numpy arrays or mxnxn numpy arrays. In this case however, to take advantage of some built-ins from qutip and make some of the applications easier, we want to be able to access each of the column vectors or state-vectors in our set of bases easily. So the standard data-type used for sets of mutually unbiased bases in this library is and nxd numpy array, where n is the number of bases and d is the number of vectors per basis. Each entry in this array is a quantum state of type qutip.QObj.
-![mubsdatatype](https://github.com/user-attachments/assets/b5e9763e-c682-47ef-9f95-eff4b2739aa2)
+
+![mubsdatatype(1)](https://github.com/user-attachments/assets/4f4b17f3-6fce-4081-b9af-74f6fb08f5cc)
+
+
 For example, in d=4 we can construct a complete set of 5 basis each including 4, 4-d column vectors. This can be unintuitive at first but makes the indexing bases[basis#][state#] and len(bases)= the number of basises.
 
 ## Generation Methods
